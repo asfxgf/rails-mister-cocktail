@@ -1,10 +1,9 @@
 <h1>Create a new cocktail</h1>
 
-<%= form_for(@cocktail) do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-  </div>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_change, as: :hidden %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 <hr>
