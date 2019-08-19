@@ -10,7 +10,8 @@
 </ul>
 <br>
 <% if @cocktail.photo.present? %>
-<%= cl_image_tag @cocktail.photo.url, height: 300, width: 400, crop: :fill %>
+<div style="background-image: url(<%= cl_image_path @cocktail.photo %> )"></div>
+<%= cl_image_tag @cocktail.photo %>
 <% end %>
 
 <%= link_to cocktails_path do %>
